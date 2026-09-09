@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}
+
+img{
+  display: block;
+}
+
+body{
+  padding: 20px;
+  min-height: 100dvh;
+}
+
+main{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+  gap: 20px;
+}
+
+
+dialog{
+  max-width: 50%;
+  /*display: flex;*/
+}
+
+dialog::backdrop{
+  background-color: rgba(228, 219, 236, 0.5);
+}
+
+.modal-card{
+  max-width: 75%;
+}
+
+.modal-card--image{
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.content{
+
+  display: grid;
+  place-items: center;
+}

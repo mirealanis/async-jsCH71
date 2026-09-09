@@ -30,7 +30,8 @@ export const getSingleProduct = async function (id) {
         //fetch hace la petición
         const response = await fetch(`${API_URL}/${id}`);
         const data = await response.json();
-        console.log(data);
+        return data;
+        //console.log(data);
     } catch (error) {
         console.log("Error: ", error);
     }
@@ -69,7 +70,7 @@ export const updateProduct = async (id, product) => {
             body: JSON.stringify(product),
         });
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
     } catch (error) {
         console.log("Error: ", error);
     }
@@ -90,10 +91,10 @@ export const deleteProduct = async function (id) {
             method: "DELETE",
         });
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
     } catch (error) {
         console.log("Error: ", error);
     }
 }
 
-deleteProduct(1);
+deleteProduct(1); // la info que despliega es del producto eliminado
